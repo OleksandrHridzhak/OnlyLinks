@@ -1,12 +1,15 @@
 import { LinkBox } from "./components/LinkBox/LinkBox"
 import { LINKS } from "./constants/links"
 import { Quote } from "./components/Quote/Quote"
+import bgImage from './assets/bg2.jpg';
+
+
 
 function App() {
   return (
     <div
       className="min-h-screen bg-cover bg-center w-full h-full flex flex-col items-center gap-4 py-10"
-      style={{ backgroundImage: "url('/bg2.jpg')" }}
+      style={{ backgroundImage: `url(${bgImage})` }}
     >
       <Quote>
         Progres over <br /> perfection
