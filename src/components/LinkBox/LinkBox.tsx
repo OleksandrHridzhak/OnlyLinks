@@ -5,17 +5,18 @@ type LinkBoxProps = {
     children:React.ReactNode
 }
 
-export function LinkBox({link, children}:LinkBoxProps) {
+export function LinkBox({ link, children }: LinkBoxProps) {
   return (
-    <div className="h-[70px] items-center justify-between px-6 max-w-md flex bg-grey-300  rounded-full bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-5 border border-gray-100
-    mx-2
-    ">
-      <a href={link} className="p-0 m-0 text-xl instrument-serif-regular-italic">
-        {children}
-      </a>
-      <div>
-        <MoveUpRight/>
-      </div>
-    </div>
+    <a
+      href={link}
+      className="block w-full max-w-md h-[80px] flex items-center justify-between px-6 
+        bg-grey-300 rounded-full bg-clip-padding backdrop-filter backdrop-blur-sm 
+        bg-opacity-5 border border-gray-100 text-2xl instrument-serif-regular-italic no-underline"
+    >
+      <span>{children}</span>
+      <MoveUpRight />
+    </a>
   );
 }
+
+

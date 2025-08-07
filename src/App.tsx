@@ -4,27 +4,24 @@ import { Quote } from "./components/Quote/Quote"
 
 function App() {
   return (
-    <>
-      <div
-        className="min-h-screen bg-cover bg-center w-full h-full"
-        style={{ backgroundImage: "url('/bg2.jpg')" }}
-      >
+    <div
+      className="min-h-screen bg-cover bg-center w-full h-full flex flex-col items-center gap-4 py-10"
+      style={{ backgroundImage: "url('/bg2.jpg')" }}
+    >
       <Quote>
-        Progres over <br/> perfection
+        Progres over <br /> perfection
       </Quote>
-      <ul className="flex flex-col gap-2">
-        {LINKS.map(({label, link}) => (
-          <li>  
-            <LinkBox link={link}>
-              {label}
-            </LinkBox>
+
+      <ul className="w-full max-w-4xl flex flex-col items-center gap-4 px-4">
+        {LINKS.map(({ label, link }) => (
+          <li key={link} className="w-full flex justify-center">
+            <LinkBox link={link}>{label}</LinkBox>
           </li>
         ))}
-
       </ul>
-      </div>
-    </>
-  )
+    </div>
+  );
 }
+
 
 export default App
